@@ -55,6 +55,7 @@ def play_game(game_data):
             while person_a == person_b:
                 person_b = select_person(game_data) 
             os.system("clear")
+            print(logo)
             print(f"You're right! Your current score is: {score}")
             
         else:
