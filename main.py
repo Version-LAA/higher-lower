@@ -50,17 +50,16 @@ def play_game(game_data):
 
         if compare_followers(person_a,person_b,selection):
             score += 1
-            # print(f"You're right! Your score {score}")
             person_a = selection
             person_b = select_person(game_data)
             while person_a == person_b:
                 person_b = select_person(game_data) 
             os.system("clear")
-            print(f"You're right! Your score {score}")
+            print(f"You're right! Your current score is: {score}")
             
         else:
             print(f"\nSorry you lost! {person_a['name']} has {person_a['follower_count']} vs {person_b['name']} has {person_b['follower_count']}")
-            print(f"Your final score is {score}")
+            print(f"Your final score is: {score}")
             game_active = False
         
  
